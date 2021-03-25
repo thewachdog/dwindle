@@ -1,0 +1,65 @@
+{
+  "name": "Dwindle-telegram-bot",
+  "description": "A telegram bot that can handle urls in different ways.",
+  "keywords": [
+    "telegram",
+    "python",
+    "bots"
+  ],
+  "website": "https://github.com/RabbitFored/Dwindle-telegram-bot/",
+  "repository": "https://github.com/RabbitFored/Dwindle-telegram-bot/",
+  "success_url": "https://t.me/dwindle_bot",
+  "env": {
+    "ENV": {
+      "description": "Setting this to ANYTHING will enable env variables",
+      "value": "OSTRICH"
+    },
+    "BOT_TOKEN": {
+      "description": "Your bot token",
+      "value": ""
+    },
+    "WEBHOOK":{
+       "description":"Setting this to ANYTHING will enable webhooks when in env mode messages",
+       "value":"TRUE"
+      },
+      "PUBLIC_URL":{
+       "description":"The Heroku App URL, similar to https://<appname>.herokuapp.com/",
+       "value":""
+      },
+     "PORT": {
+      "description": "Port to use for your webhooks",
+      "value": "8443"
+    },
+      "CHROMEDRIVER_PATH": {
+      "description": "Chrome driver ENV Path",
+      "value": "/app/.chromedriver/bin/chromedriver"
+    },
+      "GOOGLE_CHROME_BIN": {
+      "description": "Chrome bin ENV Path",
+      "value": "/app/.apt/usr/bin/google-chrome"
+    },
+    "BitLy_Api": {
+      "description": "Get this value from https://dev.bitly.com/",
+      "value": ""
+    },
+    "GpLinksApi": {
+      "description": "Get this value from https://gplinks.in/",
+      "value": ""
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+   "buildpacks":
+ [  {
+      "url": "https://github.com/heroku/heroku-buildpack-google-chrome"
+    },
+  {
+      "url": "https://github.com/heroku/heroku-buildpack-chromedriver"
+    },
+  { "url": "heroku/python" } ]
+ }
+
